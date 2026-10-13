@@ -1,0 +1,66 @@
+{
+  "dataset": "EG",
+  "entities": 2594,
+  "relations": 225,
+  "days": 2584,
+  "date_min": "20150219",
+  "date_max": "20220317",
+  "splits": {
+    "train": {
+      "rows": 377430,
+      "t_min": 0,
+      "t_max": 2067,
+      "days": 2068,
+      "date_min": "20150219",
+      "date_max": "20201017",
+      "articles": 82698
+    },
+    "valid": {
+      "rows": 36588,
+      "t_min": 2068,
+      "t_max": 2325,
+      "days": 258,
+      "date_min": "20201018",
+      "date_max": "20210702",
+      "articles": 7328
+    },
+    "test": {
+      "rows": 28644,
+      "t_min": 2326,
+      "t_max": 2583,
+      "days": 258,
+      "date_min": "20210703",
+      "date_max": "20220317",
+      "articles": 6055
+    }
+  },
+  "source_sha256": {
+    "data/SeCoGD/data/EG/train.txt": "77d609a8e47517a3505329b3a606ff37f059318f8acc26a6b3deabd4d7ad9573",
+    "data/SeCoGD/data_disentangled/EG_LDA_K5/train_w_contextid.txt": "76eb629c34818786edcc5246bd9d99d5c63ffc64c73f92dcd4e6c9a5dc3e7c54",
+    "data/SeCoGD/data/EG/train_w_md5s.txt": "8a79bd5319899ca3c5637aaf6b4caea4bd170c66a006d3d22c4f1e2e5bba7954",
+    "data/SeCoGD/data/EG/valid.txt": "671c7abe8ac0c5e3092dbf17c6bc08ddeb90fd01756ce3edd9bddfa7563a2e9d",
+    "data/SeCoGD/data_disentangled/EG_LDA_K5/valid_w_contextid.txt": "e77f9090c78c4488539c3d1fd9604c71601adbfb43d8641ce86050b51b90cc1f",
+    "data/SeCoGD/data/EG/valid_w_md5s.txt": "1f0a5bb680465335fe6e93f225d4207f08c45ddde90448392107960405f86bf1",
+    "data/SeCoGD/data/EG/test.txt": "39c9859dda22464e4e1f202f831675acd2202502718dba830d96bf0175dc1df2",
+    "data/SeCoGD/data_disentangled/EG_LDA_K5/test_w_contextid.txt": "c2fc9932ecbb8834324deeb4d4cf642f56e9eff8f0524822387e3490b14f3f3c",
+    "data/SeCoGD/data/EG/test_w_md5s.txt": "8adfc299ba6bc3a5e1c13136177083c0df732bebc486e67358f2a9ac1a4368a7"
+  },
+  "popularity": {
+    "implementation": "subject+object occurrences in training fact rows; self-edge counts twice; descending frequency; add while previous cumulative <= floor(total/3)",
+    "threshold_occurrences": 251620,
+    "selected_occurrences": 268725,
+    "training_occurrences": 754860,
+    "excluded_targets": [0,2,9],
+    "candidate_entities_removed": false
+  },
+  "articles": {
+    "fit": 82698,
+    "all": 96081,
+    "valid_also_train": 0,
+    "test_also_train": 0,
+    "fit_scope": "unique article MD5s linked to training events",
+    "validation_test_assignment": "frozen training dictionary and LDA inference; event label is argmax of mean topic probabilities across linked articles",
+    "doc2vec_kmeans_gmm": "train-only doc2vec representation and clustering; frozen heldout assignment"
+  },
+  "reference_manifest_sha256": "4601f6fbe5dc2dc1a64f090b40f72e1d31e2cafe969d0cb32612b7226dccec1c"
+}
