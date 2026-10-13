@@ -1,0 +1,39 @@
+{
+  "seed": 2023,
+  "tokenizer": "sent_tokenize_whitespace_stopwords_ascii_noun_lemma",
+  "fit_scope": "train_article_MD5s_only",
+  "event_aggregation": "mean_article_posterior_then_argmax",
+  "lda": {
+    "topics": 5,
+    "passes": 1,
+    "iterations": 50,
+    "chunksize": 2000,
+    "alpha": "symmetric",
+    "eta": null,
+    "minimum_probability": 0.01
+  },
+  "doc2vec": {
+    "vector_size": 128,
+    "dm": 1,
+    "window": 5,
+    "min_count": 2,
+    "negative": 5,
+    "hs": 0,
+    "epochs": 20,
+    "infer_epochs": 20,
+    "workers": 1
+  },
+  "kmeans": {
+    "clusters": 5,
+    "n_init": 10,
+    "max_iter": 300,
+    "algorithm": "lloyd"
+  },
+  "gmm": {
+    "components": 5,
+    "covariance_type": "diag",
+    "n_init": 1,
+    "max_iter": 100,
+    "reg_covar": 1e-06
+  }
+}
