@@ -1,0 +1,27 @@
+{
+  "dataset": "IR",
+  "entities": 2988,
+  "relations": 236,
+  "days": 2584,
+  "date_min": "20150219",
+  "date_max": "20220317",
+  "splits": {
+    "train": {"rows":973752,"t_min":0,"t_max":2067,"days":2068,"date_min":"20150219","date_max":"20201017","articles":196785},
+    "valid": {"rows":69827,"t_min":2068,"t_max":2325,"days":258,"date_min":"20201018","date_max":"20210702","articles":13123},
+    "test": {"rows":76239,"t_min":2326,"t_max":2583,"days":258,"date_min":"20210703","date_max":"20220317","articles":13708}
+  },
+  "source_sha256": {
+    "data/SeCoGD/data/IR/train.txt":"278db2ac296b79afb619c0556313083479bf0019d15edb9063846a0bb2813247",
+    "data/SeCoGD/data_disentangled/IR_LDA_K5/train_w_contextid.txt":"0a4ae104ec258df33af11fe68300a17364a18072a0e576a2b71101806bebd8fd",
+    "data/SeCoGD/data/IR/train_w_md5s.txt":"d4144a0a3354ad71ebd2c30528f526cb6ab8625283ba51298087eedfd1378cb3",
+    "data/SeCoGD/data/IR/valid.txt":"d10e0ca040effbda4b067c6f7a4be77aad5f50132ce643cfd240bf5266e9ad2e",
+    "data/SeCoGD/data_disentangled/IR_LDA_K5/valid_w_contextid.txt":"e96fee62e1b3990bb106a2fd6a84c6f4c0810afb3074d202a5985fcdc6e3bee5",
+    "data/SeCoGD/data/IR/valid_w_md5s.txt":"31290af7d15541ab2a1f44b8b9dd51bef27aa937d52f373f17f933870df72532",
+    "data/SeCoGD/data/IR/test.txt":"645343a8c667e582d9373e2584cc41e191f2004a5aa565f873ff22e0eca708bc",
+    "data/SeCoGD/data_disentangled/IR_LDA_K5/test_w_contextid.txt":"ad331bef124cfe1407cd55d4c19b81239b52744943da18cf8dd33c25410c8651",
+    "data/SeCoGD/data/IR/test_w_md5s.txt":"d50348bd3e52779c4fb7a5379af6f31a4f3c9172598da28b30586ee267caec13"
+  },
+  "popularity": {"implementation":"subject+object occurrences in training fact rows; self-edge counts twice; descending frequency; add while previous cumulative <= floor(total/3)","threshold_occurrences":649168,"selected_occurrences":672377,"training_occurrences":1947504,"excluded_targets":[1,0,16],"candidate_entities_removed":false},
+  "articles": {"fit":196785,"all":223616,"valid_also_train":0,"test_also_train":0,"fit_scope":"unique article MD5s linked to training events","validation_test_assignment":"frozen training dictionary and LDA inference; event label is argmax of mean topic probabilities across linked articles","doc2vec_kmeans_gmm":"train-only doc2vec representation and clustering; frozen heldout assignment"},
+  "reference_manifest_sha256":"658cb11795839bb94acffb2fe3b424dd4e2716b24fc4a1b80997226e5842b29f"
+}
