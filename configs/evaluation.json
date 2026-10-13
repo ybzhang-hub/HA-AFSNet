@@ -1,0 +1,23 @@
+{
+  "query_direction": "tail_only",
+  "filter_key": [
+    "subject",
+    "relation",
+    "timestamp"
+  ],
+  "filter_context": false,
+  "tie_handling": "average",
+  "negative_exclusions": "training_true_tails_same_subject_relation_context_date",
+  "candidate_entities": "full_released_vocabulary",
+  "popularity": "released_head_ents_train_occurrence_cumulative_one_third",
+  "history": "rolling_observed_prefix_strictly_before_query_date",
+  "context": "released_LDA_K5_event_mean_article_posterior_argmax",
+  "checkpoint": "validation_MRR; >= best updates checkpoint and resets patience",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}
